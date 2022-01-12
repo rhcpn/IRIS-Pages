@@ -1,9 +1,14 @@
 package com.mobigen.framework.exception;
 
-@SuppressWarnings("serial")
-public class AbstractMSFException extends Exception {
+import lombok.Getter;
 
+class AbstractMSFException extends Exception {
+	@Getter
 	private final String exceptionMessage;
+	
+	public AbstractMSFException() {
+		this.exceptionMessage = "";
+	}
 
 	public AbstractMSFException(String exceptionMessage) {
 		this.exceptionMessage = exceptionMessage;
@@ -12,9 +17,5 @@ public class AbstractMSFException extends Exception {
 	public AbstractMSFException(String exceptionMessage, Throwable e) {
 		this.exceptionMessage = exceptionMessage;
 		this.initCause(e);
-	}
-
-	public String getExceptionMessage() {
-		return this.exceptionMessage;
 	}
 }
