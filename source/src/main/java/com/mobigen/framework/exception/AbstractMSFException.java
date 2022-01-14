@@ -5,7 +5,7 @@ import lombok.Getter;
 class AbstractMSFException extends Exception {
 	@Getter
 	private final String exceptionMessage;
-	
+
 	public AbstractMSFException() {
 		this.exceptionMessage = "";
 	}

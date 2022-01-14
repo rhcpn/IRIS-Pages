@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="app">
-    <h1>Hello!! IRIS Web Developement Framework World!!</h1>
+    <h1>Hello!! IRIS Pages World!!</h1>
     <a href="/logout"> LOG OUT!!! </a>
     <ul>
       <li>

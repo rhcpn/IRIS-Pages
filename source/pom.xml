@@ -96,7 +96,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.22</version>
-            <optional>true</optional>
+            <scope>provided</scope>
         </dependency>
 
         <!-- H2. 테스용 In-Memory Database -->
