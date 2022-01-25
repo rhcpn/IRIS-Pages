@@ -16,7 +16,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "App",
+  name: "Main",
   extends: {},
   props: {},
   computed: {},

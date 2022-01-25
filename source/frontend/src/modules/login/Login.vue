@@ -1,15 +1,15 @@
 <template lang="html">
   <div id="index">
-    <Login />
+    <login-form />
     <axios-interceptor />
   </div>
 </template>
 
 <script type="text/javascript">
-import Login from "./sample/Login";
+import LoginForm from "./pages/login-form";
 
 export default {
-  name: "Index",
+  name: "Login",
   extends: {},
   props: {
     bar: {},
@@ -19,7 +19,7 @@ export default {
   data: () => ({}),
   computed: {},
   components: {
-    Login
+    LoginForm
   },
   watch: {},
   methods: {}

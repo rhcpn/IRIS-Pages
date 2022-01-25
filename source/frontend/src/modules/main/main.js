@@ -1,4 +1,5 @@
 import Vue from "vue";
+import store from "@/store/main";
 import api from "@/utils/api";
 import i18n from "@/utils/i18n";
 import cookie from "vue-cookies";
@@ -6,7 +7,7 @@ import router from "@/router/route";
 import * as Sentry from "@sentry/vue";
 import { Integrations } from "@sentry/tracing";
 import AxiosInterceptor from "@/components/common/axios-interceptor.vue";
-import App from "@modules/app/App.vue";
+import Main from "@modules/main/Main.vue";
 
 // svg-icon
 import { VueSvgIcon } from "@yzfe/vue-svgicon";
@@ -36,7 +37,8 @@ Sentry.init({
 });
 
 new Vue({
+  store,
   i18n,
   router,
-  render: (h) => h(App)
+  render: (h) => h(Main)
 }).$mount("#app");

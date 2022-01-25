@@ -1,11 +1,12 @@
 import Vue from "vue";
+import store from "@/store/login";
 import api from "@/utils/api";
 import i18n from "@/utils/i18n";
 import * as Sentry from "@sentry/vue";
 import { Integrations } from "@sentry/tracing";
 import cookie from "vue-cookies";
 import AxiosInterceptor from "@/components/common/axios-interceptor.vue";
-import Index from "@modules/index/Index.vue";
+import Login from "@modules/login/Login.vue";
 
 // svg-icon
 import { VueSvgIcon } from "@yzfe/vue-svgicon";
@@ -34,6 +35,7 @@ Sentry.init({
 });
 
 new Vue({
+  store,
   i18n,
-  render: (h) => h(Index)
+  render: (h) => h(Login)
 }).$mount("#index");

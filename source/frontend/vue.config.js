@@ -16,14 +16,14 @@ module.exports = {
   outputDir: "../src/main/resources/static",
   pages: {
     index: {
-      entry: "src/modules/index/index.js",
+      entry: "src/modules/login/login.js",
       template: "public/index.html",
       filename: process.env.VUE_APP_PAGES_INDEX_FILENAME,
       title: "IRIS Web software development kit - INDEX",
       chunks: ["chunk-vendors", "chunk-common", "index"]
     },
     app: {
-      entry: "src/modules/app/app.js",
+      entry: "src/modules/main/main.js",
       template: "public/app.html",
       filename: process.env.VUE_APP_PAGES_APP_FILENAME,
       title: "IRIS Web software development kit - APP",

@@ -36,7 +36,7 @@
 import RSA from "rsajs";
 
 export default {
-  name: "Login",
+  name: "login-form",
   extends: {},
   props: {},
   data() {
@@ -83,5 +83,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "Login.scss";
+@import "login-form";
 </style>

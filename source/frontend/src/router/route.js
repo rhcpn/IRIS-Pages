@@ -2,8 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import Error from "@modules/error/Error.vue";
-import Page1 from "@modules/app/pages/page1.vue";
-import Page2 from "@modules/app/pages/page2.vue";
+import Page1 from "@modules/main/pages/page1.vue";
+import Page2 from "@modules/main/pages/page2.vue";
 
 Vue.use(VueRouter);
 const routes = [
