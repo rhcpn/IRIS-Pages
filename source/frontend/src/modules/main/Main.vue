@@ -1,27 +1,28 @@
 <template lang="html">
-  <div id="app">
-    <h1>Hello!! IRIS Pages World!!</h1>
-    <a href="/logout"> LOG OUT!!! </a>
-    <ul>
-      <li>
-        <router-link to="/app/page1">Page1</router-link>
-      </li>
-      <li>
-        <router-link to="/app/page2">Page2</router-link>
-      </li>
-    </ul>
+  <div id="main">
+    <main-header/>
+    <router-link to="/main">메인으로 이동</router-link>
+    <router-link to="/views">보고서 보기 화면으로 이동 </router-link>
     <router-view></router-view>
   </div>
 </template>
 
 <script type="text/javascript">
+import MainHeader from "@/components/main-header/main-header";
+
 export default {
   name: "Main",
   extends: {},
   props: {},
   computed: {},
-  components: {},
+  components: {
+    MainHeader
+  },
   watch: {},
   methods: {}
 };
 </script>
+
+<style lang="scss">
+// @import ""
+</style>

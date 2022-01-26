@@ -1,22 +1,22 @@
 <template lang="html">
   <div>
-    <h1>Page2</h1>
+    보고서 슬라이더~
   </div>
 </template>
 
 <script type="text/javascript">
 export default {
-  name: "Page2",
+  name: "report-slider",
   extends: {},
   props: {},
-  data: function() {
-    return {};
-  },
   computed: {},
-  components: {},
+  components: {
+  },
   watch: {},
-  methods: {},
-  beforeCreate() {},
-  mounted() {}
+  methods: {}
 };
 </script>
+
+<style lang="scss">
+// @import ""
+</style>
