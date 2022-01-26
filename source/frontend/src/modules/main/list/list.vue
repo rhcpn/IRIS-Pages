@@ -1,12 +1,13 @@
 <template lang="html">
-  <div>
-    보고서 슬라이더~
+  <div id="list">
+    메인 AG_GRID 리스트~
   </div>
 </template>
 
 <script type="text/javascript">
+
 export default {
-  name: "report-slider",
+  name: "list",
   extends: {},
   props: {},
   computed: {},
