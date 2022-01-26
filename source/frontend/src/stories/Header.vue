@@ -12,7 +12,7 @@
 import MainHeader from '../components/main-header/main-header.vue';
 
 export default {
-  name: 'my-login',
+  name: 'header',
 
   components: { MainHeader },
 

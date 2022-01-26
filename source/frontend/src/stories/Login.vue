@@ -12,7 +12,7 @@
 import LoginForm from '../modules/login/components/login-form/login-form.vue';
 
 export default {
-  name: 'my-login',
+  name: 'login',
 
   components: { LoginForm },
 
