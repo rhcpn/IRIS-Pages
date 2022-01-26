@@ -6,7 +6,7 @@
 </template>
 
 <script type="text/javascript">
-import LoginForm from "./pages/login-form";
+import LoginForm from "./components/login-form/login-form";
 
 export default {
   name: "Login",
