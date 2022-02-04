@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="index">
-    <login-form />
+    <login-form></login-form>
     <axios-interceptor />
   </div>
 </template>

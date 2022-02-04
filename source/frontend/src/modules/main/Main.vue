@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="main">
-    <main-header/>
+    <main-header></main-header>
     <router-link to="/app/list">메인으로 이동</router-link>
     <router-link to="/app/views">보고서 보기 화면으로 이동 </router-link>
     <router-view></router-view>
