@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "report-screen",
+  name: "ReportScreen",
   extends: {},
   props: {},
   computed: {},

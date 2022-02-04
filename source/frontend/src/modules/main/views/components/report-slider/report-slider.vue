@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "report-slider",
+  name: "ReportSlider",
   extends: {},
   props: {},
   computed: {},

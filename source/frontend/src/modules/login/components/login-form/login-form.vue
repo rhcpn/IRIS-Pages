@@ -36,7 +36,7 @@
 import RSA from "rsajs";
 
 export default {
-  name: "login-form",
+  name: "LoginForm",
   extends: {},
   props: {},
   data() {

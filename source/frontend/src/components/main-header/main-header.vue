@@ -7,7 +7,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "main-header",
+  name: "MainHeader",
   extends: {},
   props: {
     bar: {},
