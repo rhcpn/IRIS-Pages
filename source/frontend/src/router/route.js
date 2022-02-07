@@ -2,8 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import Error from "@modules/error/Error.vue";
-import Page1 from "@modules/app/pages/page1.vue";
-import Page2 from "@modules/app/pages/page2.vue";
+import Views from "@modules/main/views/Views.vue";
+import List from "@modules/main/list/list";
 
 Vue.use(VueRouter);
 const routes = [
@@ -13,15 +13,15 @@ const routes = [
   },
   {
     path: "/app",
-    component: Page1
+    component: List
   },
   {
-    path: "/app/page1",
-    component: Page1
+    path: "/app/list",
+    component: List
   },
   {
-    path: "/app/page2",
-    component: Page2
+    path: "/app/views",
+    component: Views
   },
   {
     path: "*",

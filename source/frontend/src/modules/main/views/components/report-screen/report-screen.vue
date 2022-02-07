@@ -1,25 +1,16 @@
 <template lang="html">
-  <div id="index">
-    <Login />
-    <axios-interceptor />
+  <div>
+    슬라이더 선택 시 보여지는 보고서 화면
   </div>
 </template>
 
 <script type="text/javascript">
-import Login from "./sample/Login";
-
 export default {
-  name: "Index",
+  name: "ReportScreen",
   extends: {},
-  props: {
-    bar: {},
-    foo: {},
-    fooBar: {}
-  },
-  data: () => ({}),
+  props: {},
   computed: {},
   components: {
-    Login
   },
   watch: {},
   methods: {}

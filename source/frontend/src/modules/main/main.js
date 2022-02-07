@@ -1,11 +1,11 @@
 import Vue from "vue";
+import store from "@/store/store";
 import api from "@/utils/api";
 import i18n from "@/utils/i18n";
-import * as Sentry from "@sentry/vue";
-import { Integrations } from "@sentry/tracing";
 import cookie from "vue-cookies";
+import router from "@/router/route";
 import AxiosInterceptor from "@/components/common/axios-interceptor.vue";
-import Index from "@modules/index/Index.vue";
+import Main from "@modules/main/Main.vue";
 
 // svg-icon
 import { VueSvgIcon } from "@yzfe/vue-svgicon";
@@ -21,19 +21,10 @@ Vue.prototype.$api = api;
 Vue.component("axios-interceptor", AxiosInterceptor);
 Vue.component("icon", VueSvgIcon);
 
-Sentry.init({
-  Vue,
-  dsn:
-    "https://c10f0211c0bb41af973f1f5ebf7fda60@o924939.ingest.sentry.io/6044951",
-  integrations: [
-    new Integrations.BrowserTracing({
-      tracingOrigins: [/^\//]
-    })
-  ],
-  tracesSampleRate: 1.0
-});
 
 new Vue({
+  store,
   i18n,
-  render: (h) => h(Index)
-}).$mount("#index");
+  router,
+  render: (h) => h(Main)
+}).$mount("#app");

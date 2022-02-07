@@ -1,22 +1,23 @@
 <template lang="html">
-  <div>
-    <h1>Page2</h1>
+  <div id="list">
+    메인 AG_GRID 리스트~
   </div>
 </template>
 
 <script type="text/javascript">
+
 export default {
-  name: "Page2",
+  name: "list",
   extends: {},
   props: {},
-  data: function() {
-    return {};
-  },
   computed: {},
-  components: {},
+  components: {
+  },
   watch: {},
-  methods: {},
-  beforeCreate() {},
-  mounted() {}
+  methods: {}
 };
 </script>
+
+<style lang="scss">
+// @import ""
+</style>
