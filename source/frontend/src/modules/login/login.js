@@ -1,5 +1,5 @@
 import Vue from "vue";
-import store from "@/store/login";
+import store from "@/store/store";
 import api from "@/utils/api";
 import i18n from "@/utils/i18n";
 import cookie from "vue-cookies";
