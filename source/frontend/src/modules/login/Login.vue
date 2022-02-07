@@ -7,7 +7,7 @@
 
 <script type="text/javascript">
 import RSA from "rsajs";
-import LoginForm from "./components/login-form/login-form";
+import LoginForm from "@login/components/login-form/login-form";
 
 export default {
   name: "Login",

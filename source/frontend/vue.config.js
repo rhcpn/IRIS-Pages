@@ -40,7 +40,9 @@ module.exports = {
     resolve: {
       alias: {
         "@": path.join(__dirname, "src/"),
-        "@modules": path.join(__dirname, "src/modules")
+        "@modules": path.join(__dirname, "src/modules"),
+        "@login": path.join(__dirname, "src/modules/login"),
+        "@main": path.join(__dirname, "src/modules/main")
       }
     }
   },
