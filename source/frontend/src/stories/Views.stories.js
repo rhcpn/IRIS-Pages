@@ -1,11 +1,11 @@
-import MainHeader from '../components/main-header/main-header.vue';
+import TheHeader from '../components/the-header/the-header.vue';
 import LoginForm from '../modules/login/components/login-form/login-form.vue';
 
 export default {title: 'Common Component'}
 
 const HeaderTemplate = () => ({
-    components: { MainHeader },
-    template: '<main-header />'
+    components: { TheHeader },
+    template: '<the-header />'
 });
 
 const LoginTemplate = () => ({

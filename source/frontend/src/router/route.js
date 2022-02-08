@@ -2,8 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import Error from "@modules/error/Error.vue";
-import Views from "@modules/main/views/Views.vue";
-import List from "@modules/main/list/list";
+import ReportView from "@modules/main/report-view/report-view.vue";
+import ReportList from "@modules/main/report-list/report-list";
 
 Vue.use(VueRouter);
 const routes = [
@@ -13,15 +13,15 @@ const routes = [
   },
   {
     path: "/app",
-    component: List
+    component: ReportList
   },
   {
     path: "/app/list",
-    component: List
+    component: ReportList
   },
   {
     path: "/app/views",
-    component: Views
+    component: ReportView
   },
   {
     path: "*",

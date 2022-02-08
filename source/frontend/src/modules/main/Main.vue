@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="main">
-    <main-header></main-header>
+    <the-header></the-header>
     <router-link to="/app/list">메인으로 이동</router-link>
     <router-link to="/app/views">보고서 보기 화면으로 이동 </router-link>
     <router-view></router-view>
@@ -8,7 +8,7 @@
 </template>
 
 <script type="text/javascript">
-import MainHeader from "@/components/main-header/main-header";
+import TheHeader from "@/components/the-header/the-header";
 
 export default {
   name: "Main",
@@ -16,7 +16,7 @@ export default {
   props: {},
   computed: {},
   components: {
-    MainHeader
+    TheHeader
   },
   watch: {},
   methods: {}
