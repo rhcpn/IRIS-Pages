@@ -10,7 +10,7 @@ import ReportScreen from "./components/report-screen/report-screen";
 import ReportSlider from "./components/report-slider/report-slider";
 
 export default {
-  name: "Views",
+  name: "ReportView",
   extends: {},
   props: {},
   computed: {},

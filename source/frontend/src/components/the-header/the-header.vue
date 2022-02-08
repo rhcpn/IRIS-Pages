@@ -7,7 +7,7 @@
 
 <script type="text/javascript">
 export default {
-  name: "MainHeader",
+  name: "TheHeader",
   extends: {},
   props: {
     bar: {},
@@ -22,5 +22,5 @@ export default {
 </script>
 
 <style lang="scss">
- @import "./main-header";
+ @import "src/components/the-header/the-header";
 </style>

@@ -7,7 +7,7 @@
 <script type="text/javascript">
 
 export default {
-  name: "list",
+  name: "ReportList",
   extends: {},
   props: {},
   computed: {},
