@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="views">
+  <div class="report-view">
     <report-slider />
     <report-screen/>
   </div>
@@ -24,5 +24,5 @@ export default {
 </script>
 
 <style lang="scss">
-// @import ""
+@import "./report-view.scss"
 </style>
