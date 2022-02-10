@@ -1,6 +1,63 @@
 <template lang="html">
-  <div>
-    좌측 보고서 슬라이더 영역
+  <div class="report-slider">
+    <ul class="report-slider__list">
+      <!-- 선택되었을 경우, report-slider__item--selected 클래스 추가  -->
+      <li class="report-slider__item report-slider__item--selected">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample2.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample3.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample2.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample3.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample3.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample3.png" alt="썸네일">
+        </button>
+      </li>
+      <li class="report-slider__item">
+        <button class="report-slider__button" type="button">
+          <img src="../../../../../assets/style-product/images/sample.png" alt="썸네일">
+        </button>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -10,13 +67,12 @@ export default {
   extends: {},
   props: {},
   computed: {},
-  components: {
-  },
+  components: {},
   watch: {},
   methods: {}
 };
 </script>
 
 <style lang="scss">
-// @import ""
+@import "./report-slider.scss"
 </style>

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="report-view">
-    <report-slider />
+    <report-slider/>
     <report-screen/>
   </div>
 </template>
