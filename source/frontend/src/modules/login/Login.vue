@@ -1,6 +1,14 @@
 <template lang="html">
   <div id="index">
-    <login-form @login="login"></login-form>
+    <div class="login">
+      <div class="login-company-logo">
+        <img src="@/assets/style-product/images/logo.png" alt="">
+      </div>
+      <login-form @login="login"></login-form>
+      <div class="login-compnay-copyright">
+        <p id="near">Copyright © {{ new Date().getFullYear() }} Mobigen. All rights reserved.</p>
+      </div>
+    </div>
     <axios-interceptor />
   </div>
 </template>
@@ -57,7 +65,8 @@ export default {
       rsa.setKey(key);
       return rsa.encrypt(source);
     }
-  }
+  },
+  el: '#near'
 };
 </script>
 

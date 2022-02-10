@@ -1,10 +1,51 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: $ui-01;
+}
+
+.login-company-logo {
+  position: absolute;
+  left: rem(32px);
+  top: rem(32px);
+}
+
 .login-form {
-  @include layer("pop-out");
+  & > *:not(:last-child) {
+    margin-bottom: $spacing-xl;
+  }
+
+  @include layer("overlay");
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -70%);
-  width: rem(400px);
+  transform: translate(-50%, -60%);
+  width: rem(438px);
   background-color: $ui-02;
-  padding: $spacing-3xl $spacing-xl;
+  padding: $spacing-xl;
+}
+
+.login-form__title {
+  @include font-size("24");
+  @include font-weight("medium");
+}
+
+.login-form__input-box {
+  & > *:not(:last-child) {
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.login-form__label {
+  @include font-size("14");
+  @include font-weight("regular");
+  color: $text-02;
+}
+
+.login-compnay-copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: rem(48px);
+  color: $text-03;
 }
