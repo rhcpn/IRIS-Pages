@@ -1,13 +1,17 @@
 <template lang="html">
   <div class="header">
-    <div class="header__logo">
-      <img src="@/assets/style-product/images/logo.png" alt="" class="header__logo-img">
+    <div to="/" class="header__logo">
+      <router-link to="/">
+        <img src="@/assets/style-product/images/logo.png" alt="" class="header__logo-img">
+      </router-link>
     </div>
     <div class="header__logout">
-      <div class="header__logout-inner">
-        <span>gildong</span>
-        <icon class="svg-icon header__logout-icon" data="@/assets/style-core/images/icon/sign-out.svg"></icon>
-      </div>
+      <a href="/logout" class="header__logout-inner">
+        <button class="button button--icon button--link">
+          <span class="button__text">gildong</span>
+          <icon class="svg-icon" data="@/assets/style-core/images/icon/sign-out.svg"></icon>
+        </button>
+      </a>
     </div>
   </div>
 </template>

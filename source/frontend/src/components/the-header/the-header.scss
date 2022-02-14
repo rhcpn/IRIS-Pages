@@ -31,12 +31,6 @@
     align-items: center;
     padding: 0 $spacing-xl;
     color: $text-03;
-  }
-
-  .header__logout-icon {
-    width: 20px;
-    height: 20px;
-    color: $icon-01;
-    margin-left: $spacing-xs;
+    text-decoration: none;
   }
 }
