@@ -1,10 +1,11 @@
 <template lang="html">
   <div id="list">
-    메인 AG_GRID 리스트~
+    <ag-grid-list></ag-grid-list>
   </div>
 </template>
 
 <script type="text/javascript">
+import AgGridList from "./components/ag-grid/ag-grid-list";
 
 export default {
   name: "ReportList",
@@ -12,6 +13,7 @@ export default {
   props: {},
   computed: {},
   components: {
+    AgGridList
   },
   watch: {},
   methods: {}
@@ -19,5 +21,5 @@ export default {
 </script>
 
 <style lang="scss">
-// @import ""
+@import "src/modules/main/report-list/components/ag-grid/ag-grid-list";
 </style>
