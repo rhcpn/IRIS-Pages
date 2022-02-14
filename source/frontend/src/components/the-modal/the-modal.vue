@@ -14,9 +14,7 @@
         <div class="modal__body">
           <slot name="body"></slot>
         </div>
-        <div class="modal__foot">
           <slot name="footer"></slot>
-        </div>
       </div>
     </div>
   </transition>
