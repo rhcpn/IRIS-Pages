@@ -1,5 +1,5 @@
 import Vue from "vue";
-import store from "@/store/store";
+import store from "@/store";
 import api from "@/utils/api";
 import i18n from "@/utils/i18n";
 import cookie from "vue-cookies";
@@ -8,7 +8,7 @@ import AxiosInterceptor from "@/components/common/axios-interceptor.vue";
 import Main from "@modules/main/Main.vue";
 
 // svg-icon
-import { VueSvgIcon } from "@yzfe/vue-svgicon";
+import {VueSvgIcon} from "@yzfe/vue-svgicon";
 import "@yzfe/svgicon/lib/svgicon.css";
 
 Vue.config.productionTip = false;
@@ -23,8 +23,8 @@ Vue.component("icon", VueSvgIcon);
 
 
 new Vue({
-  store,
-  i18n,
-  router,
-  render: (h) => h(Main)
+    store,
+    i18n,
+    router,
+    render: (h) => h(Main)
 }).$mount("#app");

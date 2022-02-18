@@ -3,7 +3,7 @@
     <ul class="report-slider__list">
       <li
           class="report-slider__item"
-          v-for="(item, index) in reportDatas"
+          v-for="(item, index) in reportList"
           :key="index"
           :class=" item.id  === reportId ? 'report-slider__item--selected' : ''"
       >
@@ -25,7 +25,7 @@ export default {
   },
   extends: {},
   props: {
-    reportDatas: {
+    reportList: {
       type: Array,
       required: true,
     },

@@ -38,10 +38,6 @@ export default {
   name: "ReportScreen",
   extends: {},
   props: {
-    reportDatas: {
-      type: Array,
-      required: true,
-    },
     reportImageUrl: {
       type: String,
       required: true
@@ -88,5 +84,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./report-screen.scss"
+@import "./report-screen.scss";
 </style>
