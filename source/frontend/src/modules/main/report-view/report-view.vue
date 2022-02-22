@@ -20,7 +20,7 @@
 <script type="text/javascript">
 import ReportScreen from "./components/report-screen/report-screen";
 import ReportSlider from "./components/report-slider/report-slider";
-import {mapActions, mapState} from "vuex";
+import axios from "axios";
 
 
 export default {
@@ -28,8 +28,6 @@ export default {
   extends: {},
   props: {},
   computed: {
-    ...mapState(["report_list"]),
-
     reportCount() {
       return this.reportList.length
     },
@@ -47,7 +45,6 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['fetchReportList']),
     goToFirstReport() {
       this.reportImageUrl = this.reportList[0].thumbnailUrl;
       this.reportId = this.reportList[0].id;
@@ -81,15 +78,26 @@ export default {
       this.reportId = id;
     },
 
-    getReportList() {
-      this.reportList = this.report_list;
-      this.reportImageUrl = this.reportList[0].thumbnailUrl;
-      this.reportId = this.reportList[0].id;
+    fetchReportList() {
+      let loader = this.$loading.show(this.$constants.LOADER_CONFIG);
+
+      axios.get("https://jsonplaceholder.typicode.com/photos")
+          .then(response => {
+            this.reportList = response.data;
+            this.reportImageUrl = this.reportList[0].thumbnailUrl;
+            this.reportId = this.reportList[0].id;
+          })
+          .then(()=>{
+              loader.hide()
+          })
+          .catch(error => {
+            console.log(error)
+          })
     },
+
   },
-  async created() {
-    await this.fetchReportList()
-    this.getReportList();
+  created() {
+    this.fetchReportList();
   }
 };
 </script>

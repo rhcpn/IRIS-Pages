@@ -6,6 +6,9 @@ import cookie from "vue-cookies";
 import router from "@/router/route";
 import AxiosInterceptor from "@/components/common/axios-interceptor.vue";
 import Main from "@modules/main/Main.vue";
+import Loading from "vue-loading-overlay";
+import "vue-loading-overlay/dist/vue-loading.css";
+import constants from "@/constants/constants";
 
 // svg-icon
 import {VueSvgIcon} from "@yzfe/vue-svgicon";
@@ -14,9 +17,11 @@ import "@yzfe/svgicon/lib/svgicon.css";
 Vue.config.productionTip = false;
 
 Vue.use(cookie);
+Vue.use(Loading);
 
 Vue.prototype.$cookie = cookie;
 Vue.prototype.$api = api;
+Vue.prototype.$constants = constants;
 
 Vue.component("axios-interceptor", AxiosInterceptor);
 Vue.component("icon", VueSvgIcon);
