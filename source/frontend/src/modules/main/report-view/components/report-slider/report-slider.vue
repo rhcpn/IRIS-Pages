@@ -3,8 +3,8 @@
     <ul class="report-slider__list">
       <li
           class="report-slider__item"
-          v-for="(item, index) in reportList"
-          :key="index"
+          v-for="(item) in reportList"
+          :key="item.id"
           :class=" item.id  === reportId ? 'report-slider__item--selected' : ''"
       >
         <button class="report-slider__button" type="button"
