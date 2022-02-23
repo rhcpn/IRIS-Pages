@@ -2,11 +2,11 @@
   <div class="report-screen">
     <the-modal v-show="isOpenModal" @close-modal="closeModal">
       <template v-slot:body>
-        <img :src="reportImageUrl" alt="보고서 화면">
+        <img :src="imgUrl" alt="보고서 화면">
       </template>
     </the-modal>
     <div class="report-screen__pick">
-      <img :src="reportImageUrl" alt="보고서 화면">
+      <img :src="imgUrl" :alt="reportId">
     </div>
     <div class="report-screen__pagination">
       <div class="pagination">
@@ -56,7 +56,12 @@ export default {
       isOpenModal: false
     }
   },
-  computed: {},
+  computed: {
+    imgUrl() {
+      const noImage = require("@/assets/style-core/images/common/no-image.png");
+      return (this.reportImageUrl == "") ? noImage : this.reportImageUrl;
+    }
+  },
   components: {
     TheModal
   },
@@ -78,8 +83,7 @@ export default {
     closeModal() {
       this.isOpenModal = false;
     }
-  },
-
+  }
 };
 </script>
 
