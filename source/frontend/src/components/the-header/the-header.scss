@@ -2,7 +2,6 @@
   display: flex;
   width: 100%;
   height: rem(60px);
-  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid $ui-04;
 }
@@ -13,12 +12,13 @@
 }
 
 .header__logo-img {
-  height: 26px;
+  height: rem(26px);
 }
 
 .header__logout {
   display: flex;
   height: 100%;
+  margin-left: auto;
 
   &::before {
     content: '';

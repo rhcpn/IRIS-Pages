@@ -21,5 +21,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/modules/main/report-list/components/ag-grid/ag-grid-list";
 </style>

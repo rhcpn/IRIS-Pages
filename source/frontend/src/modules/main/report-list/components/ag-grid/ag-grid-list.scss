@@ -1,16 +1,57 @@
+#main {
+  height: 100%;
+  overflow-y: hidden;
+}
+
 .main-content {
   width: 100%;
   height: 100vh;
   background-color: $ui-01;
   position: relative;
-  padding: 0 $spacing-md;
+  padding: $spacing-md;
 }
 
 .ag-theme-balham {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 140px);
 }
 
 .ag-center-cols-container {
-  width: 100% !important;
+  width: 1870px !important;
+}
+
+.ag-header-cell {
+  justify-content: center;
+}
+
+.list-layout__top-bar {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: $spacing-sm;
+}
+
+.list-layout__filter {
+  display: flex;
+  align-items: center;
+  .checkbox {
+    display: flex;
+  }
+}
+
+.list-layout__search-bar {
+  & > * {
+    margin-left: $spacing-sm;
+  }
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.list-layout__filter-title {
+  @include font-size("15");
+  @include font-weight("regular");
+  color: $text-02;
+  em {
+    @include font-weight("medium");
+  }
 }
