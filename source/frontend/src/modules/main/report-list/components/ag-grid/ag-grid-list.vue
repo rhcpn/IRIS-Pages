@@ -122,10 +122,10 @@ export default {
       }
     ];
 
-    fetch("http://localhost:3001/list")
+    fetch("http://localhost:3000/list")
         .then((result) => result.json())
         .then((rowData) => (this.rowData = rowData));
-  }
+  },
 };
 </script>
 
