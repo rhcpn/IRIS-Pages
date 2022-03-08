@@ -1,8 +1,8 @@
 <template lang="html">
   <div id="list">
     <the-header></the-header>
-    <button type="button" @click="openModal">모달 열기</button>
-    <the-modal v-show="isOpenModal" @close-modal="closeModal">
+    <button type="button" @click="isOpenModal = true">모달 열기</button>
+    <the-modal v-show="isOpenModal" @close-modal="isOpenModal = false">
       <template v-slot:body>
         <img src="../../../assets/style-product/images/screen-sample2.png" alt="미리보기">
       </template>
@@ -13,7 +13,6 @@
 
 <script type="text/javascript">
 import TheHeader from "@/components/the-header/the-header";
-import TheModal from "@/components/the-modal/the-modal"
 
 export default {
   name: "ReportList",
@@ -28,16 +27,9 @@ export default {
   },
   components: {
     TheHeader,
-    TheModal
   },
   watch: {},
   methods: {
-    openModal(){
-      this.isOpenModal = true;
-    },
-    closeModal(){
-      this.isOpenModal = false;
-    }
   }
 };
 </script>

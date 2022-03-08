@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="report-screen">
-    <the-modal v-show="isOpenModal" @close-modal="closeModal">
+    <the-modal v-show="isOpenModal" @close-modal="isOpenModal = false">
       <template v-slot:body>
         <img :src="imgUrl" alt="보고서 화면">
       </template>
@@ -24,7 +24,7 @@
           <icon class="svg-icon" data="@icon/chevron-double-right-medium.svg"></icon>
         </button>
       </div>
-      <button class="report-screen__fit-button button button--link" type="button" @click="openModal">
+      <button class="report-screen__fit-button button button--link" type="button" @click="isOpenModal = true">
         <icon class="svg-icon" data="@icon/topology-original-size.svg"></icon>
       </button>
     </div>
@@ -32,7 +32,6 @@
 </template>
 
 <script type="text/javascript">
-import TheModal from "@/components/the-modal/the-modal"
 
 export default {
   name: "ReportScreen",
@@ -63,7 +62,6 @@ export default {
     }
   },
   components: {
-    TheModal
   },
   watch: {},
   methods: {
@@ -76,13 +74,6 @@ export default {
       let event = 'go-to-previous-report'
       this.$emit(event, itemId)
     },
-
-    openModal() {
-      this.isOpenModal = true;
-    },
-    closeModal() {
-      this.isOpenModal = false;
-    }
   }
 };
 </script>

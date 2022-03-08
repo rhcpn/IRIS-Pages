@@ -9,6 +9,7 @@ import Main from "@modules/main/Main.vue";
 import Loading from "vue-loading-overlay";
 import "vue-loading-overlay/dist/vue-loading.css";
 import constants from "@/constants/constants";
+import TheModal from"@/components/the-modal/the-modal";
 
 // svg-icon
 import {VueSvgIcon} from "@yzfe/vue-svgicon";
@@ -25,7 +26,7 @@ Vue.prototype.$constants = constants;
 
 Vue.component("axios-interceptor", AxiosInterceptor);
 Vue.component("icon", VueSvgIcon);
-
+Vue.component("TheModal", TheModal)
 
 new Vue({
     store,
