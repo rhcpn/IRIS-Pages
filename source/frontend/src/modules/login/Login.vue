@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="index">
     <login-form @login="login"></login-form>
-    <axios-interceptor />
+    <axios-interceptor/>
   </div>
 </template>
 
@@ -24,21 +24,22 @@ export default {
   },
   watch: {},
   methods: {
-    async login(userInfo){
-
-      let publicKey = await this.getPublicKey();
-      let password = userInfo.password;
-
-      if (publicKey && publicKey !== "") {
-        password = this.encrypt(publicKey, userInfo.password);
-      }
-
-      let xAccessToken = await this.auth(userInfo.username, password);
-      console.info(publicKey, xAccessToken);
-
-      if (xAccessToken && xAccessToken !== "") {
+    async login(userInfo) {
       window.location.href = "app";
-      }
+
+
+      // let publicKey = await this.getPublicKey();
+      // let password = userInfo.password;
+      //
+      // if (publicKey && publicKey !== "") {
+      //   password = this.encrypt(publicKey, userInfo.password);
+      // }
+      //
+      // let xAccessToken = await this.auth(userInfo.username, password);
+      // console.info(publicKey, xAccessToken);
+      //
+      // if (xAccessToken && xAccessToken !== "") {
+      // }
     },
 
     async getPublicKey() {
