@@ -3,13 +3,13 @@
     <ul class="report-slider__list">
       <li
           class="report-slider__item"
-          v-for="(item) in reportList"
-          :key="item.id"
-          :class=" item.id  === reportId ? 'report-slider__item--selected' : ''"
+          v-for="(item, index) in reportList"
+          :key="index"
+          :class=" index  === reportId ? 'report-slider__item--selected' : ''"
       >
-        <button class="report-slider__button" type="button"
-                @click="getSelectedReport(item)">
-          <img :src="item.thumbnailUrl" :alt="item.id">
+        <button class="report-slider__button" type="button" :title="index"
+                @click="getSelectedReport(item, index)">
+          <img :src="imgUrl + item.id" :alt="index">
         </button>
       </li>
     </ul>
@@ -21,7 +21,9 @@
 export default {
   name: "ReportSlider",
   data() {
-    return {}
+    return {
+
+    }
   },
   extends: {},
   props: {
@@ -32,15 +34,20 @@ export default {
     reportId: {
       type: Number,
       required: true
+    },
+    imgUrl: {
+      type: String,
+      required: true
     }
   },
-  computed: {},
+  computed: {
+  },
   components: {},
   watch: {},
   methods: {
-    getSelectedReport(item) {
+    getSelectedReport(item, index) {
       let event = 'get-selected-report';
-      this.$emit(event, item.thumbnailUrl, item.id);
+      this.$emit(event, item.id, index);
     }
   },
   created() {

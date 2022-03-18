@@ -3,12 +3,14 @@
     <report-slider
         :report-list="reportList"
         :report-id="reportId"
+        :img-url="imgUrl"
         @get-selected-report="getSelectedReport"
     ></report-slider>
     <report-screen
         :report-image-url="reportImageUrl"
         :report-id="reportId"
         :report-count="reportCount"
+        :img-url="imgUrl"
         @go-to-previous-report="goToPreviousReport"
         @go-to-next-report="goToNextReport"
         @go-to-first-report="goToFirstReport"
@@ -20,8 +22,7 @@
 <script type="text/javascript">
 import ReportScreen from "./components/report-screen/report-screen";
 import ReportSlider from "./components/report-slider/report-slider";
-import axios from "axios";
-
+import dbJson from "@/db/db.json"
 
 export default {
   name: "ReportView",
@@ -41,36 +42,41 @@ export default {
     return {
       reportList: [],
       reportImageUrl: '',
-      reportId: 1,
+      reportId: 0,
+      imgUrl: 'http://192.168.102.202:9999/iris-studio-service/report/thumbnail/'
     }
   },
   methods: {
     goToFirstReport() {
-      this.reportImageUrl = this.reportList[0].thumbnailUrl;
-      this.reportId = this.reportList[0].id;
+      this.reportImageUrl = this.reportList[0].id;
+      this.reportId = this.reportList.indexOf(this.reportList[0]);
     },
 
     goToLastReport() {
-      this.reportImageUrl = this.reportList[this.reportList.length - 1].thumbnailUrl;
-      this.reportId = this.reportList[this.reportList.length - 1].id;
+      this.reportImageUrl = this.reportList[this.reportList.length - 1].id;
+      this.reportId = this.reportList.indexOf(this.reportList[this.reportList.length - 1]);
     },
 
-    goToPreviousReport(id) {
-      let previousNumber = id - 2;
+    goToPreviousReport(row) {
+      let previousNumber = row - 1;
 
       previousNumber < 0 ? previousNumber = 0 : '';
 
-      this.reportImageUrl = this.reportList[Number(previousNumber)].thumbnailUrl;
-      this.reportId = this.reportList[Number(previousNumber)].id;
+      this.reportImageUrl = this.reportList[previousNumber].id;
+      this.reportId = this.reportList.indexOf(this.reportList[previousNumber]);
     },
 
-    goToNextReport(id) {
-      let NextNumber = id;
+    goToNextReport(row) {
+      let NextNumber = row + 1;
 
-      NextNumber >= 5000 ? NextNumber = 4999 : '';
+      NextNumber >= this.reportList.length
+          ?
+          NextNumber = this.reportList.indexOf(this.reportList[this.reportList.length - 1])
+          :
+          '';
 
-      this.reportImageUrl = this.reportList[Number(NextNumber)].thumbnailUrl;
-      this.reportId = this.reportList[Number(NextNumber)].id;
+      this.reportImageUrl = this.reportList[NextNumber].id;
+      this.reportId = this.reportList.indexOf(this.reportList[NextNumber]);
     },
 
     getSelectedReport(thumbnail, id) {
@@ -81,18 +87,11 @@ export default {
     fetchReportList() {
       let loader = this.$loading.show(this.$constants.LOADER_CONFIG);
 
-      axios.get("https://jsonplaceholder.typicode.com/photos")
-          .then(response => {
-            this.reportList = response.data;
-            this.reportImageUrl = this.reportList[0].thumbnailUrl;
-            this.reportId = this.reportList[0].id;
-          })
-          .then(()=>{
-              loader.hide()
-          })
-          .catch(error => {
-            console.log(error)
-          })
+      this.reportList = dbJson.list;
+      this.reportImageUrl = this.reportList[0].id;
+      this.reportId = this.reportList.indexOf(this.reportList[0]);
+
+      loader.hide();
     },
 
   },
