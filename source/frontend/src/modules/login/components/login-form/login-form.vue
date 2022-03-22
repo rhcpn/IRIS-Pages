@@ -1,40 +1,56 @@
 <template lang="html">
-  <div>
-    <form class="form login-form" @submit.prevent="submit">
-      <icon data="@icon/user-setting.svg"></icon>
-      <label for="username"> 사용자명1:</label><br/>
+  <form class="form login-form" @submit.prevent="submit">
+    <h1 class="login-form__title">Login</h1>
+    <div class="login-form__input-box">
+      <div class="login-form__label">
+        <label for="username">User Name</label>
+      </div>
       <input
-          class="text-input"
-          type="text"
-          id="username"
-          v-model="username"
-          maxlength="10"
-          required
-      /><br/>
-      <icon data="@icon/key.svg"></icon>
-      <label for="password">비밀번호:</label><br/>
+        class="text-input text-input--lg"
+        type="text"
+        id="username"
+        v-model="username"
+        maxlength="10"
+        required
+        placeholder="User Email"
+      />
+      <div class="login-form__label">
+        <label for="password">Password</label>
+      </div>
       <input
-          class="text-input"
-          type="password"
-          id="password"
-          v-model="password"
-          maxlength="15"
-          required
-      /><br/>
-      <select id="locale" class="login_form-locale">
-        <option value="korean">한국어</option>
-        <option value="English">English</option>
-      </select
-      ><br/>
+        class="text-input text-input--lg"
+        type="password"
+        id="password"
+        v-model="password"
+        maxlength="15"
+        required
+        placeholder="Password"
+      />
+      <div class="login-form__option">
+        <div class="checkbox">
+          <input
+            id="saveUser"
+            type="checkbox"
+            value="label"
+            class="checkbox__input login-form-option__save-username-check"
+          />
+          <label for="saveUser" class="checkbox__label">
+            <span class="login-form-option__save-username-check-lable-text"
+              >Remember me</span
+            >
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="login-form__button">
       <button type="submit" class="button button--primary button--lg w-12_12">
-        로그인
+        LOGIN
       </button>
-    </form>
-  </div>
+    </div>
+  </form>
 </template>
 
 <script type="text/javascript">
-
 export default {
   name: "LoginForm",
   extends: {},
@@ -54,7 +70,7 @@ export default {
         this.$emit("login", {
           username: this.username,
           password: this.password
-        })
+        });
       }
     }
   }

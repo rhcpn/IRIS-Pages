@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="views">
     <report-slider />
-    <report-screen/>
+    <report-screen />
   </div>
 </template>
 

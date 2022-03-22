@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: rem(60px);
+  align-items: center;
+  border-bottom: 1px solid $ui-04;
+}
+
+.header__logo {
+  padding-left: rem(20px);
+  padding-top: $spacing-2xs;
+}
+
+.header__logo-img {
+  height: rem(26px);
+}
+
+.header__logout {
+  display: flex;
+  height: 100%;
+  margin-left: auto;
+
+  &::before {
+    content: '';
+    display: block;
+    border-left: 1px solid $ui-04;
+  }
+
+  .header__logout-inner {
+    display: flex;
+    align-items: center;
+    padding: 0 $spacing-xl;
+    color: $text-03;
+    text-decoration: none;
+  }
+}
