@@ -6,32 +6,38 @@
         <label for="username">User Name</label>
       </div>
       <input
-          class="text-input text-input--lg"
-          type="text"
-          id="username"
-          v-model="username"
-          maxlength="10"
-          required
-          placeholder="User Email"
+        class="text-input text-input--lg"
+        type="text"
+        id="username"
+        v-model="username"
+        maxlength="10"
+        required
+        placeholder="User Email"
       />
       <div class="login-form__label">
         <label for="password">Password</label>
       </div>
       <input
-          class="text-input text-input--lg"
-          type="password"
-          id="password"
-          v-model="password"
-          maxlength="15"
-          required
-          placeholder="Password"
+        class="text-input text-input--lg"
+        type="password"
+        id="password"
+        v-model="password"
+        maxlength="15"
+        required
+        placeholder="Password"
       />
       <div class="login-form__option">
         <div class="checkbox">
-          <input id="saveUser" type="checkbox" value="label"
-                 class="checkbox__input login-form-option__save-username-check">
+          <input
+            id="saveUser"
+            type="checkbox"
+            value="label"
+            class="checkbox__input login-form-option__save-username-check"
+          />
           <label for="saveUser" class="checkbox__label">
-            <span class="login-form-option__save-username-check-lable-text">Remember me</span>
+            <span class="login-form-option__save-username-check-lable-text"
+              >Remember me</span
+            >
           </label>
         </div>
       </div>
@@ -45,7 +51,6 @@
 </template>
 
 <script type="text/javascript">
-
 export default {
   name: "LoginForm",
   extends: {},
@@ -65,7 +70,7 @@ export default {
         this.$emit("login", {
           username: this.username,
           password: this.password
-        })
+        });
       }
     }
   }
